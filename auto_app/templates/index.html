@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="{% static 'css/index.css'%}">
+</head>
+<body>
+	<div class='form-wrapper'>
+		<form action="/index/" class="form-row">
+            <input class=" search-form" name="q" type="search" placeholder="поиск авто по производителю или модели авто">
+        </form>
+    </div>
+   
+	<div class='car-list-wrapper'>
+		 
+	    
+    	
+		<div class='car-list'>
+			<div class="header-list">
+				<h3>Бренд</h3>
+			    <h3>Модель авто</h3>
+			    <h3>Коробка передач</h3>
+			    <h3>Год выпуска</h3>
+			    <h3>Цвет</h3>
+		    </div>
+			{% for car in cars %}	
+				<div class='car'>
+					
+					<p>{{car.brend}}</p>
+					
+					<p>{{car.car_model}}</p>
+					
+					<p>{{car.get_gearbox_display}}</p>
+					
+					<p>{{car.release_year}}</p>
+					
+					<p>{{car.body_color}}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+.car-list-wrapper{
+	display: flex;
+	width:100%;
+	justify-content: center;
+
+}
+.car-list{
+	width:80%;
+}
+.car{
+	display: flex;
+	width: 40%;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.header-list{
+	display: flex;
+	width: 40%;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
