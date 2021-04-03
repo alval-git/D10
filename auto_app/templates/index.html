@@ -10,11 +10,20 @@
 <body>
 	<div class='form-wrapper'>
 		<form action="/index/" class="form-row">
-            <input class=" search-form" name="q" type="search" placeholder="поиск авто по производителю или модели авто">
+            <input class="form-elem brend-input" name="brend" type="search" placeholder="марка авто">
+            <input class="form-elem model-input" name="car_model" type="search" placeholder="модель авто">
+            <input class="form-elem year-input" name="release_year" type="search" placeholder="год">
+            <input class="form-elem color-input" name="body_color" type="search" placeholder="цвет">
+            <select class="form-elem gearbox-choice" name="gearbox">
+            	<option value="1">Автомат</option>
+            	<option value="2">Ручная</option>
+            	<option value="3">Робот</option>
+            </select>
+            <button class="form-elem btn">Найти авто</button>
         </form>
     </div>
    
-	<div class='car-list-wrapper'>
+	<!-- <div class='car-list-wrapper'>
 		 
 	    
     	
@@ -40,7 +49,33 @@
 					<p>{{car.body_color}}</p>
 				</div>
 			{% endfor %}
-		</div>
+		</div> -->
+	</div>
+	<div class="table-wrapper">
+		<table>
+			<thead>
+				<tr>
+					<td class="t-header-elem">Марка авто</td>
+					<td class="t-header-elem">Модель авто</td>
+					<td class="t-header-elem">Коробка передач</td>
+					<td class="t-header-elem">Год выпуска</td>
+					<td class="t-header-elem">Цвет</td>
+				</tr>
+			</thead>
+			{% for car in cars %}	
+				<tr>		
+					<td class="t-elem">{{car.brend}}</td>
+						
+					<td class="t-elem"> {{car.car_model}}</td>
+						
+					<td class="t-elem">{{car.get_gearbox_display}}</td>
+						
+					<td class="t-elem">{{car.release_year}}</td>
+						
+					<td class="t-elem">{{car.body_color}}</td>
+				</tr>
+			{% endfor %}
+		</table>
 	</div>
 </body>
 </html>

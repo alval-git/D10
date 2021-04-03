@@ -1,5 +1,5 @@
 
-.car-list-wrapper{
+/*.car-list-wrapper{
 	display: flex;
 	width:100%;
 	justify-content: center;
@@ -20,4 +20,65 @@
 	width: 40%;
 	justify-content: space-around;
 	flex-wrap: wrap;
+}*/
+body{
+	margin:0;
+}
+.form-wrapper{
+	width:100%;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.form-row{
+	display: flex;
+	justify-content: center;
+	width: 90%;
+	flex-wrap: wrap;
+}
+
+.form-elem{
+	margin:7px;
+	width:140px;
+	height:40px;
+
+}
+.btn{
+	border-radius: 5px;
+	background-color:#326fa8;
+	color: #fff;
+}
+.table-wrapper{
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+table{
+	width: 90%;
+	border-spacing: 0;
+	border-collapse: separate;
+}
+.t-header-elem{
+
+	background-color: #0066;
+	color: #fff;
+	vertical-align: middle;
+	padding: 10px;
+	font-size: 22px;
+	text-align: center;
+	border:1px solid black;
+	min-width: 70px;
+
+
+}
+.t-elem{
+	vertical-align: middle;
+	padding: 10px;
+	font-size: 16px;
+	text-align: center;
+	border:1px solid black;
+	min-width: 70px;
+
+
 }
